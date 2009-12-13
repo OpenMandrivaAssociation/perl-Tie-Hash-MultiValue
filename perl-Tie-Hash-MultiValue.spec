@@ -1,5 +1,5 @@
 %define upstream_name    Tie-Hash-MultiValue
-%define upstream_version 0.06
+%define upstream_version 1.01
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -13,6 +13,7 @@ Source0:    http://www.cpan.org/modules/by-module/Tie/%{upstream_name}-%{upstrea
 
 BuildRequires: perl(Test::Simple)
 BuildRequires: perl(Tie::Hash)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -28,11 +29,10 @@ and access them all at once by accessing the value stored under the key.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+%make
 
 %check
-%{make} test
+%make test
 
 %install
 rm -rf %buildroot
@@ -46,5 +46,3 @@ rm -rf %buildroot
 %doc Changes LICENSE README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
