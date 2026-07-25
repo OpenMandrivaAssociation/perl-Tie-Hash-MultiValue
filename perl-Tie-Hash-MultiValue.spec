@@ -1,15 +1,15 @@
 %define upstream_name    Tie-Hash-MultiValue
-%define upstream_version 1.02
+%define upstream_version 1.07
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Hash w/multiple items under a single key
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Tie/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Tie-Hash-MultiValue
+Source0:	https://cpan.metacpan.org/authors/id/M/MC/MCMAHON/Tie-Hash-MultiValue-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
