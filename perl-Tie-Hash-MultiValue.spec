@@ -1,15 +1,13 @@
 %define upstream_name    Tie-Hash-MultiValue
-%define upstream_version 1.07
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.07
+Release:	2
 
 Summary:	Hash w/multiple items under a single key
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Tie-Hash-MultiValue
-Source0:	https://cpan.metacpan.org/authors/id/M/MC/MCMAHON/Tie-Hash-MultiValue-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MC/MCMAHON/Tie-Hash-MultiValue-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ This means that you can store as many items as you like under a single key,
 and access them all at once by accessing the value stored under the key.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
