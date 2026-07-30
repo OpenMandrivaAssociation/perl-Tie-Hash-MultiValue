@@ -1,13 +1,14 @@
 %define upstream_name    Tie-Hash-MultiValue
+%define upstream_version 1.07
 Name:		perl-%{upstream_name}
 Version:	1.07
-Release:	2
+Release:	1
 
 Summary:	Hash w/multiple items under a single key
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Tie-Hash-MultiValue
-Source0:	https://cpan.metacpan.org/authors/id/M/MC/MCMAHON/Tie-Hash-MultiValue-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MC/MCMAHON/Tie-Hash-MultiValue-1.07.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -42,27 +43,3 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{perl_vendorlib}/*
 
 
-%changelog
-* Mon Apr 18 2011 Funda Wang <fwang@mandriva.org> 1.20.0-2mdv2011.0
-+ Revision: 655238
-- rebuild for updated spec-helper
-
-* Thu Dec 17 2009 Jérôme Quelin <jquelin@mandriva.org> 1.20.0-1mdv2011.0
-+ Revision: 479670
-- removing old tarball
-
-* Thu Dec 17 2009 Jérôme Quelin <jquelin@mandriva.org> 1.20.0-1mdv2010.1
-+ Revision: 479669
-- update to 1.02
-
-* Sun Dec 13 2009 Jérôme Quelin <jquelin@mandriva.org> 1.10.0-1mdv2010.1
-+ Revision: 478062
-- update to 1.01
-
-* Tue Nov 17 2009 Jérôme Quelin <jquelin@mandriva.org> 0.60.0-1mdv2010.1
-+ Revision: 466795
-- import perl-Tie-Hash-MultiValue
-
-
-* Tue Nov 17 2009 cpan2dist 0.06-1mdv
-- initial mdv release, generated with cpan2dist
